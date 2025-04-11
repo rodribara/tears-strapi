@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "expired": {
+      "type": "boolean",
+      "required": true
+    },
+    "description": {
+      "type": "blocks"
+    },
+    "location": {
+      "type": "json"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "stock": {
+      "type": "integer"
+    },
+    "author": {
+      "type": "email"
+    },
+    "sold": {
+      "type": "date"
+    },
+    "image": {
+      "allowedTypes": [
+        "images"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "productStatus": {
+      "type": "enumeration",
+      "enum": [
+        "pending",
+        "current",
+        "next"
+      ]
+    }
+  }
+}
